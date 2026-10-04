@@ -34,17 +34,17 @@ CHAR_W = 8.43
 LINE_H = 22
 TOP = 64
 TYPE_SPEED = 0.045
-PROMPT = "lucas@rio ~ $ "
+PROMPT = "lucas ~ $ "
 
 SCRIPT = [
     ("cmd", "whoami"),
-    ("out", [("fg", "Lucas Rolim"), ("dim", "  ·  data & AI leader  ·  entrepreneur  ·  Rio de Janeiro, BR")]),
+    ("out", [("fg", "Lucas Rolim"), ("dim", "  ·  data & AI leader  ·  entrepreneur  ·  builder")]),
     ("out", [("dim", "Engineer by training, operator by habit. I turn data into decisions and AI into P&L.")]),
     ("gap",),
     ("cmd", "cat career.log"),
-    ("out", [("accent", "now     "), ("fg", "leading AI agent builds"), ("dim", " at one of LatAm's largest tech companies")]),
+    ("out", [("accent", "now     "), ("fg", "leading AI agent builds"), ("dim", " at iFood · 100M+ orders optimized every month")]),
     ("out", [("accent", "now     "), ("fg", "founder, 21xlabs"), ("dim", " · my AI consultancy for established companies")]),
-    ("out", [("accent", "before  "), ("fg", "Director of Data & AI"), ("dim", " at high-growth startups")]),
+    ("out", [("accent", "before  "), ("fg", "Director of Data & ML"), ("dim", " · built teams from 0 to dozens")]),
     ("out", [("accent", "edu     "), ("fg", "M.Sc. UFRJ"), ("dim", "  ·  Stanford (business & innovation)  ·  Berkeley (data strategy)")]),
     ("gap",),
     ("cmd", "ls ~/expertise"),
@@ -135,7 +135,7 @@ def build(theme):
     <animate attributeName="width" values="{vals}" calcMode="discrete" begin="{t + 0.25:.2f}s" dur="{dur:.2f}s" fill="freeze"/>
   </rect></clipPath>
   <g opacity="0">{reveal(t)}
-    <text x="{PAD_X}" y="{y}"><tspan fill="{c['accent']}">lucas@rio</tspan><tspan fill="{c['dim']}"> ~ $ </tspan></text>
+    <text x="{PAD_X}" y="{y}"><tspan fill="{c['accent']}">lucas</tspan><tspan fill="{c['dim']}"> ~ $ </tspan></text>
     <text x="{start_x}" y="{y}" fill="{c['fg']}" clip-path="url(#{cid})" font-weight="600">{escape(cmd)}</text>
   </g>""")
             t += 0.25 + dur + 0.35
@@ -154,7 +154,7 @@ def build(theme):
             t += 0.3
             body.append(f"""
   <g opacity="0">{reveal(t)}
-    <text x="{PAD_X}" y="{y}"><tspan fill="{c['accent']}">lucas@rio</tspan><tspan fill="{c['dim']}"> ~ $ </tspan></text>
+    <text x="{PAD_X}" y="{y}"><tspan fill="{c['accent']}">lucas</tspan><tspan fill="{c['dim']}"> ~ $ </tspan></text>
     <rect x="{PAD_X + len(PROMPT) * CHAR_W:.1f}" y="{y - 14}" width="9" height="18" fill="{c['accent']}">
       <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
     </rect>
@@ -170,7 +170,7 @@ def build(theme):
   <circle cx="24" cy="18" r="6" fill="#E0645A"/>
   <circle cx="44" cy="18" r="6" fill="#E5B045"/>
   <circle cx="64" cy="18" r="6" fill="#5FB566"/>
-  <text x="{WIDTH / 2}" y="23" fill="{c['dim']}" text-anchor="middle" style="font-size:12px">lucas@rio — zsh</text>
+  <text x="{WIDTH / 2}" y="23" fill="{c['dim']}" text-anchor="middle" style="font-size:12px">lucas — zsh</text>
 {''.join(body)}
 </svg>
 """
